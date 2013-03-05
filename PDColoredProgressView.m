@@ -107,14 +107,12 @@
 
 - (void) setTintColor: (UIColor *) aColor
 {
-	[_tintColor release];
-	_tintColor = [aColor retain];
+	_tintColor = aColor;
 }
 
 - (void) setBackgroundColor: (UIColor *) aColor
 {
-	[_backgroundColor release];
-	_backgroundColor = [aColor retain];
+	_backgroundColor = aColor;
 }
 
 - (void) moveProgress
@@ -148,12 +146,6 @@
 	{
         self.progress = newProgress;
     }
-}
-
-- (void) dealloc
-{
-    [super dealloc];
-	[_tintColor release];
 }
 
 
